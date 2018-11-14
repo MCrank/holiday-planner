@@ -1,0 +1,10 @@
+{
+  "fireaseKeys": {
+    "apiKey": "",
+    "authDomain": "",
+    "databaseURL": "",
+    "projectId": "",
+    "storageBucket": "",
+    "messagingSenderId": ""
+  }
+}
