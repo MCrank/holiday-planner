@@ -12,12 +12,25 @@ const navbarEvents = () => {
         .signOut()
         .then(() => {
           console.log('You logged out');
+          $('#auth').show();
+          $('#friends').hide();
+          $('#holidays').hide();
         })
         .catch((err) => {
-          console.error(err);
+          console.error('Your still logged in', err);
         });
+    } else if (evt.target.id === 'navbar-button-holidays') {
+      $('#auth').hide();
+      $('#friends').hide();
+      $('#holidays').show();
+    } else if (evt.target.id === 'navbar-button-friends') {
+      $('#auth').hide();
+      $('#friends').show();
+      $('#holidays').hide();
     } else {
-      console.log(evt.target.id);
+      $('#auth').show();
+      $('#friends').hide();
+      $('#holidays').hide();
     }
   });
 };
