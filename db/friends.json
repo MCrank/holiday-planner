@@ -1,0 +1,47 @@
+{
+  "person01": {
+    "name": "Abigail S Wolfgram",
+    "address": "4988 Goldleaf Lane, Parsippany, NJ 07054",
+    "phoneNumber": "201-644-6474",
+    "email": "maryjane2008@hotmail.com",
+    "relationship": "Sister",
+    "isAvoiding": false,
+    "uid": "Iyw956dEiWUEy7wb8s452DtfxMD3"
+  },
+  "person02": {
+    "name": "William V Grunwald",
+    "address": "3613 Loving Acres Road, Irving, TX 75063",
+    "phoneNumber": "817-203-1636",
+    "email": "guiseppe2005@gmail.com",
+    "relationship": "Friend",
+    "isAvoiding": true,
+    "uid": "9475"
+  },
+  "person03": {
+    "name": "Jonell F Coons",
+    "address": "4299 Dogwood Road, Phoenix, AZ 85023",
+    "phoneNumber": "602-644-3068",
+    "email": "ieland2010@yahoo.com",
+    "relationship": "Ex-Girlfreind",
+    "isAvoiding": true,
+    "uid": "Iyw956dEiWUEy7wb8s452DtfxMD3"
+  },
+  "person04": {
+    "name": "Nellie C Bass",
+    "address": "4103 Honeysuckle Lane, Longview, WA 98632",
+    "phoneNumber": "360-577-5948",
+    "email": "taya.webe2@yahoo.com",
+    "relationship": "Girlfriend",
+    "isAvoiding": false,
+    "uid": "Iyw956dEiWUEy7wb8s452DtfxMD3"
+  },
+  "person05": {
+    "name": "Russell S Whaley",
+    "address": "2523 Lawman Avenue, Washington, VA 20011",
+    "phoneNumber": "703-254-4034",
+    "email": "myrtice1999@yahoo.com",
+    "relationship": "Best Friend",
+    "isAvoiding": false,
+    "uid": "Iyw956dEiWUEy7wb8s452DtfxMD3"
+  }
+}
