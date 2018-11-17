@@ -1,0 +1,26 @@
+{
+  "holiday01": {
+    "name": "Thanksgiving",
+    "Date": "11/22/2018",
+    "imageUrl": "https://bit.ly/2Fq27Lm",
+    "location": "NSS",
+    "startTime": "11am",
+    "uid": "12345"
+  },
+  "holiday02": {
+    "name": "Birthday",
+    "Date": "04/23/2019",
+    "imageUrl": "https://bit.ly/2QORvad",
+    "location": "Hawaii",
+    "startTime": "4pm",
+    "uid": "Iyw956dEiWUEy7wb8s452DtfxMD3"
+  },
+  "holiday03": {
+    "name": "Festivus",
+    "Date": "11/22/2018",
+    "imageUrl": "https://bit.ly/2DqQkde",
+    "location": "Home",
+    "startTime": "8am",
+    "uid": "Iyw956dEiWUEy7wb8s452DtfxMD3"
+  }
+}
