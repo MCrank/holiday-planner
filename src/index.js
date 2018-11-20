@@ -12,7 +12,7 @@ import './index.scss';
 const initApp = () => {
   firebase.initializeApp(apiKeys.firebaseKeys);
   createNavbar();
-  authHelpers.checkLoginStatus(friendsPage.friendsPage);
+  authHelpers.checkLoginStatus(friendsPage.initializeFriendsPage);
   loginBtn();
 };
 
