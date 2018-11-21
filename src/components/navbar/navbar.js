@@ -5,13 +5,12 @@ import './navbar.scss';
 
 const navbarEvents = () => {
   $('.nav-link').on('click', (evt) => {
-    console.log(evt.target.id);
     if (evt.target.id === 'navbar-button-logout') {
       firebase
         .auth()
         .signOut()
         .then(() => {
-          console.log('You logged out');
+          // console.log('You logged out');
           $('#auth').show();
           $('#friends').hide();
           $('#holidays').hide();
