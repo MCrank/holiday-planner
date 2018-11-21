@@ -2,6 +2,7 @@ import axios from 'axios';
 import $ from 'jquery';
 import apiKeys from '../../../db/apiKeys.json';
 import authHelpers from '../../helpers/authHelpers';
+import friendsData from '../../helpers/data/friendsData';
 
 const printSingleFriend = (friend) => {
   const friendString = `
@@ -11,7 +12,7 @@ const printSingleFriend = (friend) => {
     <p>${friend.address}</p>
     <p>${friend.email}</p>
     <p>${friend.phoneNumber}</p>
-    <button class="btn btn-danger delete-btn" data-delete-id=${friend.id}>X</button>
+    <button class="btn btn-danger delete-btn" data-delete-id=${friend.id}>Delete</button>
   </div>
   `;
   $('#single-container').html(friendString);
@@ -19,11 +20,9 @@ const printSingleFriend = (friend) => {
 
 const getSingleFriend = (evt) => {
   const friendId = evt.target.dataset.dropdownId;
-  axios
-    .get(`${apiKeys.firebaseKeys.databaseURL}/friends/${friendId}.json`)
-    .then((result) => {
-      const singleFriend = result.data;
-      singleFriend.id = friendId;
+  friendsData
+    .getSingleFriend(friendId)
+    .then((singleFriend) => {
       printSingleFriend(singleFriend);
     })
     .catch((error) => {
