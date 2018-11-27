@@ -20,12 +20,19 @@ const printSingleFriend = (friend, holidays) => {
     <p>${friend.address}</p>
     <p>${friend.email}</p>
     <p>${friend.phoneNumber}</p>
+    <div class="form-check form-check-inline">
+      <label class="form-check-label pr-2" for="${friend.id}">Am I avoiding?</label>
+      <input class="form-check-input is-avoiding-checkbox" type="checkbox" id="${friend.id}">
+    </div>
     <button class="btn btn-danger delete-btn" data-delete-id=${friend.id}>Delete</button>
     <button class="btn btn-info edit-btn" data-edit-id=${friend.id}>Edit</button>
     <div class="holiday-container">${holidayStringBuilder(holidays)}</div>
   </div>
   `;
   $('#single-container').html(friendString);
+  if (friend.isAvoiding) {
+    $('.is-avoiding-checkbox').attr('checked', true);
+  }
 };
 
 const getSingleFriend = (evt) => {
@@ -91,9 +98,24 @@ const deleteFriend = (evt) => {
     });
 };
 
+const updateIsAvoiding = (evt) => {
+  const friendId = evt.target.id;
+  const isAvoiding = evt.target.checked;
+  friendsData
+    .updateIsAvoiding(friendId, isAvoiding)
+    .then(() => {
+      friendsPage();
+    })
+    .catch((error) => {
+      console.error('error in udating flag', error);
+    });
+  console.log('You checked a check');
+};
+
 const bindEvents = () => {
   $('body').on('click', '.get-single', getSingleFriend);
   $('body').on('click', '.delete-btn', deleteFriend);
+  $('body').on('change', '.is-avoiding-checkbox', updateIsAvoiding);
 };
 
 const initializeFriendsPage = () => {
