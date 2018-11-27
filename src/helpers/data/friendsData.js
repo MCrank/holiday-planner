@@ -40,9 +40,9 @@ const deleteFriend = friendId => axios.delete(`${firebaseUrl}/friends/${friendId
 
 const addNewFriend = friendObj => axios.post(`${firebaseUrl}/friends.json`, JSON.stringify(friendObj));
 
-const updateFriend = (friendObj, friendId) => {
-  axios.put(`${firebaseUrl}/friends/${friendId}.json`, JSON.stringify(friendObj));
-};
+const updateFriend = (friendObj, friendId) => axios.put(`${firebaseUrl}/friends/${friendId}.json`, JSON.stringify(friendObj));
+
+const updateIsAvoiding = (friendId, isAvoiding) => axios.patch(`${firebaseUrl}/friends/${friendId}.json`, { isAvoiding });
 
 export default {
   getAllFriends,
@@ -50,4 +50,5 @@ export default {
   deleteFriend,
   addNewFriend,
   updateFriend,
+  updateIsAvoiding,
 };
